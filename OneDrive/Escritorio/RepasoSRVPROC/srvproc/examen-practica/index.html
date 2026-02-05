@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Examen - Concurrencia Java</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel izquierdo - Recordatorios de sintaxis -->
+        <aside class="sidebar">
+            <h2>📋 Recordatorios</h2>
+            <div id="syntax-reminders">
+                <!-- Se carga dinámicamente según el ejercicio -->
+            </div>
+        </aside>
+
+        <!-- Panel principal -->
+        <main class="main-content">
+            <header>
+                <h1>🎯 Práctica Examen - Concurrencia Java</h1>
+                <p class="exam-info">Examen: 6/02 → 8h a 10h | Lock/Synchronized (2.5p) | Atomic Variables (2.5p) | Concurrent Collections (5p)</p>
+            </header>
+
+            <!-- Navegación de ejercicios -->
+            <nav class="exercise-nav">
+                <button class="exercise-btn active" data-exercise="1">Ej 1</button>
+                <button class="exercise-btn" data-exercise="2">Ej 2</button>
+                <button class="exercise-btn" data-exercise="3">Ej 3</button>
+                <button class="exercise-btn" data-exercise="4">Ej 4</button>
+                <button class="exercise-btn" data-exercise="5">Ej 5</button>
+                <button class="exercise-btn" data-exercise="6">Ej 6</button>
+                <button class="exercise-btn" data-exercise="7">Ej 7</button>
+                <button class="exercise-btn" data-exercise="8">Ej 8</button>
+                <button class="exercise-btn" data-exercise="9">Ej 9</button>
+                <button class="exercise-btn" data-exercise="10">Ej 10</button>
+            </nav>
+
+            <!-- Área del ejercicio -->
+            <div class="exercise-area">
+                <div class="exercise-header">
+                    <div class="exercise-info">
+                        <span class="exercise-category" id="exercise-category">Lock/Synchronized</span>
+                        <span class="exercise-points" id="exercise-points">2.5 puntos</span>
+                    </div>
+                    <button class="hint-btn" id="hint-btn" title="Ver pista">
+                        💡
+                    </button>
+                </div>
+
+                <h2 id="exercise-title">Ejercicio 1: Crear y lanzar hilos</h2>
+                <div id="exercise-description" class="exercise-description">
+                    <!-- Descripción del ejercicio -->
+                </div>
+
+                <!-- Editor de código -->
+                <div class="code-editor-container">
+                    <textarea id="code-editor"></textarea>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="action-buttons">
+                    <button class="btn btn-check" id="check-btn">✅ Comprobar Código</button>
+                    <button class="btn btn-solution" id="solution-btn">📖 Ver Solución</button>
+                    <button class="btn btn-reset" id="reset-btn">🔄 Reiniciar</button>
+                </div>
+
+                <!-- Área de resultados -->
+                <div id="result-area" class="result-area hidden">
+                    <h3 id="result-title">Resultado</h3>
+                    <div id="result-content"></div>
+                </div>
+
+                <!-- Modal de pistas -->
+                <div id="hint-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-hint">&times;</span>
+                        <h3>💡 Pista</h3>
+                        <div id="hint-content"></div>
+                    </div>
+                </div>
+
+                <!-- Modal de solución -->
+                <div id="solution-modal" class="modal hidden">
+                    <div class="modal-content solution-modal-content">
+                        <span class="close-btn" id="close-solution">&times;</span>
+                        <h3>📖 Solución Completa</h3>
+                        <pre id="solution-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+    <script src="exercises.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
